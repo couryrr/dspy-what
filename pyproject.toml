@@ -1,0 +1,25 @@
+[project]
+name = "dspy-what"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Coury Richards", email = "2702992+couryrr@users.noreply.github.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "altair>=6.1.0",
+    "datasets>=4.8.5",
+    "dspy>=3.2.0",
+    "llama-cpp-python[server]>=0.3.21",
+    "polars>=1.40.1",
+]
+
+[project.scripts]
+dspy-what = "dspy_what:main"
+dspy-what-train = "dspy_what.train:train"
+dspy-what-eval = "dspy_what.evaluate:evaluate"
+
+[build-system]
+requires = ["uv_build>=0.11.7,<0.12.0"]
+build-backend = "uv_build"

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<!-- saved from url=(0046)file:///C:/Users/Coury/Devlopment/results.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style id="vega-tooltip-style">#vg-tooltip-element {
+  visibility: hidden;
+  padding: 8px;
+  position: fixed;
+  z-index: 1000;
+  font-family: sans-serif;
+  font-size: 11px;
+  border-radius: 3px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  /* The default theme is the light theme. */
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid #d9d9d9;
+  color: black;
+}
+#vg-tooltip-element.visible {
+  visibility: visible;
+}
+#vg-tooltip-element h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 13px;
+}
+#vg-tooltip-element table {
+  border-spacing: 0;
+}
+#vg-tooltip-element table tr {
+  border: none;
+}
+#vg-tooltip-element table tr td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+#vg-tooltip-element table tr td.key {
+  color: #808080;
+  max-width: 150px;
+  text-align: right;
+  padding-right: 4px;
+}
+#vg-tooltip-element table tr td.value {
+  display: block;
+  max-width: 300px;
+  max-height: 7em;
+  text-align: left;
+}
+#vg-tooltip-element.dark-theme {
+  background-color: rgba(32, 32, 32, 0.9);
+  border: 1px solid #f5f5f5;
+  color: white;
+}
+#vg-tooltip-element.dark-theme td.key {
+  color: #bfbfbf;
+}
+</style>
+  
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="./results_files/vega@6"></script>
+  <script type="text/javascript" src="./results_files/vega-lite@6.4.1"></script>
+  <script type="text/javascript" src="./results_files/vega-embed@7"></script>
+<style id="vega-embed-style">.vega-embed {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+}
+.vega-embed.has-actions {
+  padding-right: 38px;
+}
+.vega-embed details:not([open]) > :not(summary) {
+  display: none !important;
+}
+.vega-embed summary {
+  list-style: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 6px;
+  z-index: 1000;
+  background: white;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  color: #1b1e23;
+  border: 1px solid #aaa;
+  border-radius: 999px;
+  opacity: 0.2;
+  transition: opacity 0.4s ease-in;
+  cursor: pointer;
+  line-height: 0px;
+}
+.vega-embed summary::-webkit-details-marker {
+  display: none;
+}
+.vega-embed summary:active {
+  box-shadow: #aaa 0px 0px 0px 1px inset;
+}
+.vega-embed summary svg {
+  width: 14px;
+  height: 14px;
+}
+.vega-embed details[open] summary {
+  opacity: 0.7;
+}
+.vega-embed:hover summary, .vega-embed:focus-within summary {
+  opacity: 1 !important;
+  transition: opacity 0.2s ease;
+}
+.vega-embed .vega-actions {
+  position: absolute;
+  z-index: 1001;
+  top: 35px;
+  right: -9px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
+  border: 1px solid #d9d9d9;
+  background: white;
+  animation-duration: 0.15s;
+  animation-name: scale-in;
+  animation-timing-function: cubic-bezier(0.2, 0, 0.13, 1.5);
+  text-align: left;
+}
+.vega-embed .vega-actions a {
+  padding: 8px 16px;
+  font-family: sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  color: #434a56;
+  text-decoration: none;
+}
+.vega-embed .vega-actions a:hover, .vega-embed .vega-actions a:focus {
+  background-color: #f7f7f9;
+  color: black;
+}
+.vega-embed .vega-actions::before, .vega-embed .vega-actions::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+}
+.vega-embed .vega-actions::before {
+  left: auto;
+  right: 14px;
+  top: -16px;
+  border: 8px solid rgba(0, 0, 0, 0);
+  border-bottom-color: #d9d9d9;
+}
+.vega-embed .vega-actions::after {
+  left: auto;
+  right: 15px;
+  top: -14px;
+  border: 7px solid rgba(0, 0, 0, 0);
+  border-bottom-color: #fff;
+}
+.vega-embed .chart-wrapper.fit-x {
+  width: 100%;
+}
+.vega-embed .chart-wrapper.fit-y {
+  height: 100%;
+}
+
+.vega-embed-wrapper {
+  max-width: 100%;
+  overflow: auto;
+  padding-right: 14px;
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+</style></head>
+<body>
+  <div id="vis" class="vega-embed has-actions"><div class="chart-wrapper" role="graphics-document" aria-roledescription="visualization" aria-label="Vega visualization" style="cursor: default;"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" class="marks" width="788" height="725" viewBox="0 0 788 725" style="background-color: white;"><g fill="none" stroke-miterlimit="10" transform="translate(70,28)"><g class="mark-group role-frame root" role="graphics-object" aria-roledescription="group mark container"><g transform="translate(0,0)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z"></path><g><g class="mark-group role-scope concat_0_group" role="graphics-object" aria-roledescription="group mark container"><g transform="translate(0,0)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z"></path><g><g class="mark-group role-scope concat_0_concat_0_group" role="graphics-object" aria-roledescription="group mark container"><g transform="translate(0,0)"><path class="background" aria-hidden="true" d="M0.5,0.5h300v250h-300Z" fill="transparent" stroke="#ddd"></path><g><g class="mark-group role-axis" aria-hidden="true"><g transform="translate(0.5,0.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-grid" pointer-events="none"><line transform="translate(0,250)" x2="300" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,200)" x2="300" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,150)" x2="300" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,100)" x2="300" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,50)" x2="300" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,0)" x2="300" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis" aria-label="X-axis titled &#39;True Label&#39; for a discrete scale with 2 values: benign, malicious"><g transform="translate(0.5,250.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-tick" pointer-events="none"><line transform="translate(75,0)" x2="0" y2="5" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(225,0)" x2="0" y2="5" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-label" pointer-events="none"><text text-anchor="end" transform="translate(74.5,7) rotate(270) translate(0,3)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">benign</text><text text-anchor="end" transform="translate(224.5,7) rotate(270) translate(0,3)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">malicious</text></g><g class="mark-rule role-axis-domain" pointer-events="none"><line transform="translate(0,0)" x2="300" y2="0" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-title" pointer-events="none"><text text-anchor="middle" transform="translate(150,61.6796875)" font-family="sans-serif" font-size="11px" font-weight="bold" fill="#000" opacity="1">True Label</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis" aria-label="Y-axis titled &#39;Accuracy&#39; for a linear scale with values from 0.0 to 1.0"><g transform="translate(0.5,0.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-tick" pointer-events="none"><line transform="translate(0,250)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,200)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,150)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,100)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,50)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,0)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-label" pointer-events="none"><text text-anchor="end" transform="translate(-7,253)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">0.0</text><text text-anchor="end" transform="translate(-7,203)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">0.2</text><text text-anchor="end" transform="translate(-7,153)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">0.4</text><text text-anchor="end" transform="translate(-7,103)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">0.6</text><text text-anchor="end" transform="translate(-7,52.999999999999986)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">0.8</text><text text-anchor="end" transform="translate(-7,3)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">1.0</text></g><g class="mark-rule role-axis-domain" pointer-events="none"><line transform="translate(0,250)" x2="0" y2="-250" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-title" pointer-events="none"><text text-anchor="middle" transform="translate(-24.9013671875,125) rotate(-90) translate(0,-2)" font-family="sans-serif" font-size="11px" font-weight="bold" fill="#000" opacity="1">Accuracy</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-rect role-mark concat_0_concat_0_marks" role="graphics-object" aria-roledescription="rect mark container"><path aria-label="True Label: benign; Accuracy: 0.964705882353; expected: benign; accuracy: 0.964705882353; count: 340" role="graphics-symbol" aria-roledescription="bar" d="M7.5,8.823529411764703h135v241.1764705882353h-135Z" fill="#4c78a8"></path><path aria-label="True Label: malicious; Accuracy: 0.599257884972; expected: malicious; accuracy: 0.599257884972; count: 539" role="graphics-symbol" aria-roledescription="bar" d="M157.5,100.18552875695732h135v149.81447124304268h-135Z" fill="#f58518"></path></g><g class="mark-group role-title"><g transform="translate(150,-22)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-text role-title-text" role="graphics-symbol" aria-roledescription="title" aria-label="Title text &#39;Accuracy by Label&#39;" pointer-events="none"><text text-anchor="middle" transform="translate(0,10)" font-family="sans-serif" font-size="13px" font-weight="bold" fill="#000" opacity="1">Accuracy by Label</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g></g><path class="foreground" aria-hidden="true" d="" display="none"></path></g></g><g class="mark-group role-scope concat_0_concat_1_group" role="graphics-object" aria-roledescription="group mark container"><g transform="translate(358,0)"><path class="background" aria-hidden="true" d="M0.5,0.5h300v250h-300Z" fill="transparent" stroke="#ddd"></path><g><g class="mark-group role-axis" aria-hidden="true"><g transform="translate(0.5,0.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-grid" pointer-events="none"><line transform="translate(0,250)" x2="300" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,200)" x2="300" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,150)" x2="300" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,100)" x2="300" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,50)" x2="300" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,0)" x2="300" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis" aria-label="X-axis titled &#39;Label&#39; for a discrete scale with 2 values: benign, malicious"><g transform="translate(0.5,250.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-tick" pointer-events="none"><line transform="translate(75,0)" x2="0" y2="5" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(225,0)" x2="0" y2="5" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-label" pointer-events="none"><text text-anchor="end" transform="translate(74.5,7) rotate(270) translate(0,3)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">benign</text><text text-anchor="end" transform="translate(224.5,7) rotate(270) translate(0,3)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">malicious</text></g><g class="mark-rule role-axis-domain" pointer-events="none"><line transform="translate(0,0)" x2="300" y2="0" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-title" pointer-events="none"><text text-anchor="middle" transform="translate(150,61.6796875)" font-family="sans-serif" font-size="11px" font-weight="bold" fill="#000" opacity="1">Label</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis" aria-label="Y-axis titled &#39;Proportion&#39; for a linear scale with values from 0.0 to 1.0"><g transform="translate(0.5,0.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-tick" pointer-events="none"><line transform="translate(0,250)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,200)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,150)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,100)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,50)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,0)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-label" pointer-events="none"><text text-anchor="end" transform="translate(-7,253)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">0.0</text><text text-anchor="end" transform="translate(-7,203)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">0.2</text><text text-anchor="end" transform="translate(-7,153)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">0.4</text><text text-anchor="end" transform="translate(-7,103)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">0.6</text><text text-anchor="end" transform="translate(-7,52.999999999999986)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">0.8</text><text text-anchor="end" transform="translate(-7,3)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">1.0</text></g><g class="mark-rule role-axis-domain" pointer-events="none"><line transform="translate(0,250)" x2="0" y2="-250" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-title" pointer-events="none"><text text-anchor="middle" transform="translate(-24.9013671875,125) rotate(-90) translate(0,-2)" font-family="sans-serif" font-size="11px" font-weight="bold" fill="#000" opacity="1">Proportion</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-rect role-mark concat_0_concat_1_marks" role="graphics-object" aria-roledescription="rect mark container"><path aria-label="Label: malicious; Proportion: 0.613072193122; label: malicious; count: 2692; proportion: 0.613072193122" role="graphics-symbol" aria-roledescription="bar" d="M157.5,96.73195171942608h135v153.2680482805739h-135Z" fill="#f58518"></path><path aria-label="Label: benign; Proportion: 0.386927806878; label: benign; count: 1699; proportion: 0.386927806878" role="graphics-symbol" aria-roledescription="bar" d="M7.5,153.26804828057388h135v96.73195171942612h-135Z" fill="#4c78a8"></path></g><g class="mark-group role-title"><g transform="translate(150,-22)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-text role-title-text" role="graphics-symbol" aria-roledescription="title" aria-label="Title text &#39;Dataset Distribution&#39;" pointer-events="none"><text text-anchor="middle" transform="translate(0,10)" font-family="sans-serif" font-size="13px" font-weight="bold" fill="#000" opacity="1">Dataset Distribution</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g></g><path class="foreground" aria-hidden="true" d="" display="none"></path></g></g></g><path class="foreground" aria-hidden="true" d="" display="none"></path></g></g><g class="mark-group role-scope concat_1_group" role="graphics-object" aria-roledescription="group mark container"><g transform="translate(0,358)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z"></path><g><g class="mark-group role-scope concat_1_concat_0_group" role="graphics-object" aria-roledescription="group mark container"><g transform="translate(0,0)"><path class="background" aria-hidden="true" d="M0.5,0.5h300v250h-300Z" fill="transparent" stroke="#ddd"></path><g><g class="mark-rect role-mark concat_1_concat_0_marks" role="graphics-object" aria-roledescription="rect mark container"><path aria-label="Predicted: malicious; True Label: malicious; count: 323; expected: malicious; predicted: malicious" role="graphics-symbol" aria-roledescription="rect mark" d="M150,125h150v125h-150Z" fill="rgb(11, 77, 147)"></path><path aria-label="Predicted: malicious; True Label: benign; count: 12; expected: benign; predicted: malicious" role="graphics-symbol" aria-roledescription="rect mark" d="M150,0h150v125h-150Z" fill="rgb(207, 225, 242)"></path><path aria-label="Predicted: benign; True Label: benign; count: 328; expected: benign; predicted: benign" role="graphics-symbol" aria-roledescription="rect mark" d="M0,0h150v125h-150Z" fill="rgb(10, 74, 144)"></path><path aria-label="Predicted: benign; True Label: malicious; count: 216; expected: malicious; predicted: benign" role="graphics-symbol" aria-roledescription="rect mark" d="M0,125h150v125h-150Z" fill="rgb(60, 138, 194)"></path></g><g class="mark-group role-title"><g transform="translate(150,-17)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-text role-title-text" role="graphics-symbol" aria-roledescription="title" aria-label="Title text &#39;Confusion Matrix&#39;" pointer-events="none"><text text-anchor="middle" transform="translate(0,10)" font-family="sans-serif" font-size="13px" font-weight="bold" fill="#000" opacity="1">Confusion Matrix</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis" aria-label="X-axis titled &#39;Predicted&#39; for a discrete scale with 2 values: benign, malicious"><g transform="translate(0.5,250.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-tick" pointer-events="none"><line transform="translate(75,0)" x2="0" y2="5" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(225,0)" x2="0" y2="5" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-label" pointer-events="none"><text text-anchor="end" transform="translate(74.5,7) rotate(270) translate(0,3)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">benign</text><text text-anchor="end" transform="translate(224.5,7) rotate(270) translate(0,3)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">malicious</text></g><g class="mark-rule role-axis-domain" pointer-events="none"><line transform="translate(0,0)" x2="300" y2="0" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-title" pointer-events="none"><text text-anchor="middle" transform="translate(150,61.6796875)" font-family="sans-serif" font-size="11px" font-weight="bold" fill="#000" opacity="1">Predicted</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis" aria-label="Y-axis titled &#39;True Label&#39; for a discrete scale with 2 values: benign, malicious"><g transform="translate(0.5,0.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-tick" pointer-events="none"><line transform="translate(0,62)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,187)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-label" pointer-events="none"><text text-anchor="end" transform="translate(-7,65)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">benign</text><text text-anchor="end" transform="translate(-7,190)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">malicious</text></g><g class="mark-rule role-axis-domain" pointer-events="none"><line transform="translate(0,0)" x2="0" y2="250" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-title" pointer-events="none"><text text-anchor="middle" transform="translate(-52.6796875,125) rotate(-90) translate(0,-2)" font-family="sans-serif" font-size="11px" font-weight="bold" fill="#000" opacity="1">True Label</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g></g><path class="foreground" aria-hidden="true" d="" display="none"></path></g></g><g class="mark-group role-scope concat_1_concat_1_group" role="graphics-object" aria-roledescription="group mark container"><g transform="translate(358,0)"><path class="background" aria-hidden="true" d="M0.5,0.5h300v250h-300Z" fill="transparent" stroke="#ddd"></path><g><g class="mark-group role-axis" aria-hidden="true"><g transform="translate(0.5,0.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-grid" pointer-events="none"><line transform="translate(0,250)" x2="300" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,200)" x2="300" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,150)" x2="300" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,100)" x2="300" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,50)" x2="300" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line><line transform="translate(0,0)" x2="300" y2="0" stroke="#ddd" stroke-width="1" opacity="1"></line></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis" aria-label="X-axis for a discrete scale with 1 value: Overall Accuracy"><g transform="translate(0.5,250.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-tick" pointer-events="none"><line transform="translate(150,0)" x2="0" y2="5" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-label" pointer-events="none"><text text-anchor="end" transform="translate(149.5,7) rotate(270) translate(0,3)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">Overall Accuracy</text></g><g class="mark-rule role-axis-domain" pointer-events="none"><line transform="translate(0,0)" x2="300" y2="0" stroke="#888" stroke-width="1" opacity="1"></line></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-group role-axis" role="graphics-symbol" aria-roledescription="axis" aria-label="Y-axis titled &#39;Accuracy&#39; for a linear scale with values from 0.0 to 1.0"><g transform="translate(0.5,0.5)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rule role-axis-tick" pointer-events="none"><line transform="translate(0,250)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,200)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,150)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,100)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,50)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"></line><line transform="translate(0,0)" x2="-5" y2="0" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-label" pointer-events="none"><text text-anchor="end" transform="translate(-7,253)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">0.0</text><text text-anchor="end" transform="translate(-7,203)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">0.2</text><text text-anchor="end" transform="translate(-7,153)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">0.4</text><text text-anchor="end" transform="translate(-7,103)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">0.6</text><text text-anchor="end" transform="translate(-7,52.999999999999986)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">0.8</text><text text-anchor="end" transform="translate(-7,3)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">1.0</text></g><g class="mark-rule role-axis-domain" pointer-events="none"><line transform="translate(0,250)" x2="0" y2="-250" stroke="#888" stroke-width="1" opacity="1"></line></g><g class="mark-text role-axis-title" pointer-events="none"><text text-anchor="middle" transform="translate(-24.9013671875,125) rotate(-90) translate(0,-2)" font-family="sans-serif" font-size="11px" font-weight="bold" fill="#000" opacity="1">Accuracy</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-rect role-mark concat_1_concat_1_layer_0_marks" role="graphics-object" aria-roledescription="rect mark container"><path aria-label="metric: Overall Accuracy; Accuracy: 0.7406; value: 0.7406; threshold: 0.7; passed: true" role="graphics-symbol" aria-roledescription="bar" d="M15,64.85h270v185.15h-270Z" fill="steelblue"></path></g><g class="mark-rule role-mark concat_1_concat_1_layer_1_marks" role="graphics-object" aria-roledescription="rule mark container"><line aria-label="threshold: 0.7" role="graphics-symbol" aria-roledescription="rule mark" transform="translate(300,75.00000000000001)" x2="-300" y2="0" stroke="red" stroke-dasharray="4,4"></line></g><g class="mark-group role-title"><g transform="translate(150,-22)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-text role-title-text" role="graphics-symbol" aria-roledescription="title" aria-label="Title text &#39;Overall Accuracy (threshold: 70%)&#39;" pointer-events="none"><text text-anchor="middle" transform="translate(0,10)" font-family="sans-serif" font-size="13px" font-weight="bold" fill="#000" opacity="1">Overall Accuracy (threshold: 70%)</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g></g><path class="foreground" aria-hidden="true" d="" display="none"></path></g></g><g class="mark-group role-legend" role="graphics-symbol" aria-roledescription="legend" aria-label="Gradient legend titled &#39;count&#39; for fill color with values from 12 to 328"><g transform="translate(678,0)"><path class="background" aria-hidden="true" d="M0,0h35v216h-35Z" pointer-events="none"></path><g><g class="mark-group role-legend-entry"><g transform="translate(0,16)"><path class="background" aria-hidden="true" d="M0,0h0v0h0Z" pointer-events="none"></path><g><g class="mark-rect role-legend-gradient" pointer-events="none"><path d="M0,0h16v200h-16Z" fill="url(file:///C:/Users/Coury/Devlopment/results.html#gradient_0)" stroke="#ddd" stroke-width="0" opacity="1"></path></g><g class="mark-text role-legend-label" pointer-events="none"><text text-anchor="start" transform="translate(18,147.30379746835445)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">100</text><text text-anchor="start" transform="translate(18,84.0126582278481)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">200</text><text text-anchor="start" transform="translate(18,20.721518987341778)" font-family="sans-serif" font-size="10px" fill="#000" opacity="1">300</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g><g class="mark-text role-legend-title" pointer-events="none"><text text-anchor="start" transform="translate(0,9)" font-family="sans-serif" font-size="11px" font-weight="bold" fill="#000" opacity="1">count</text></g></g><path class="foreground" aria-hidden="true" d="" pointer-events="none" display="none"></path></g></g></g><path class="foreground" aria-hidden="true" d="" display="none"></path></g></g></g><path class="foreground" aria-hidden="true" d="" display="none"></path></g></g></g><defs><lineargradient id="gradient_0" x1="0" x2="0" y1="1" y2="0"><stop offset="0" stop-color="rgb(207, 225, 242)"></stop><stop offset="0.02531645569620253" stop-color="rgb(203, 223, 240)"></stop><stop offset="0.08860759493670886" stop-color="rgb(192, 217, 237)"></stop><stop offset="0.1518987341772152" stop-color="rgb(179, 211, 232)"></stop><stop offset="0.21518987341772153" stop-color="rgb(164, 204, 228)"></stop><stop offset="0.27848101265822783" stop-color="rgb(148, 196, 224)"></stop><stop offset="0.34177215189873417" stop-color="rgb(132, 187, 219)"></stop><stop offset="0.4050632911392405" stop-color="rgb(115, 177, 215)"></stop><stop offset="0.46835443037974683" stop-color="rgb(99, 168, 210)"></stop><stop offset="0.5316455696202531" stop-color="rgb(84, 158, 204)"></stop><stop offset="0.5949367088607594" stop-color="rgb(70, 147, 198)"></stop><stop offset="0.6582278481012658" stop-color="rgb(57, 136, 193)"></stop><stop offset="0.7215189873417721" stop-color="rgb(45, 125, 187)"></stop><stop offset="0.7848101265822784" stop-color="rgb(35, 114, 180)"></stop><stop offset="0.8481012658227848" stop-color="rgb(25, 102, 171)"></stop><stop offset="0.9113924050632911" stop-color="rgb(17, 90, 162)"></stop><stop offset="0.9746835443037974" stop-color="rgb(12, 79, 149)"></stop><stop offset="1" stop-color="rgb(10, 74, 144)"></stop></lineargradient></defs></svg><form class="vega-bindings"></form></div><details title="Click to view actions"><summary>
+<svg viewBox="0 0 16 16" fill="currentColor" stroke="none" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+  <circle r="2" cy="8" cx="2"></circle>
+  <circle r="2" cy="8" cx="8"></circle>
+  <circle r="2" cy="8" cx="14"></circle>
+</svg></summary><div class="vega-actions"><a href="file:///C:/Users/Coury/Devlopment/results.html#" target="_blank" download="visualization.svg">Save as SVG</a><a href="file:///C:/Users/Coury/Devlopment/results.html#" target="_blank" download="visualization.png">Save as PNG</a><a href="file:///C:/Users/Coury/Devlopment/results.html#">View Source</a><a href="file:///C:/Users/Coury/Devlopment/results.html#">View Compiled Vega</a><a href="file:///C:/Users/Coury/Devlopment/results.html#">Open in Vega Editor</a></div></details></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "vconcat": [{"hconcat": [{"data": {"name": "data-02ed58d70ef973339177cd33a4cadf85"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "expected", "legend": null, "type": "nominal"}, "tooltip": [{"field": "expected", "type": "nominal"}, {"field": "accuracy", "type": "quantitative"}, {"field": "count", "type": "quantitative"}], "x": {"field": "expected", "title": "True Label", "type": "nominal"}, "y": {"field": "accuracy", "scale": {"domain": [0, 1]}, "title": "Accuracy", "type": "quantitative"}}, "height": 250, "title": "Accuracy by Label", "width": 300}, {"data": {"name": "data-573e98e8c2bf7b92cc2bff13bb293ce3"}, "mark": {"type": "bar"}, "encoding": {"color": {"field": "label", "legend": null, "type": "nominal"}, "tooltip": [{"field": "label", "type": "nominal"}, {"field": "count", "type": "quantitative"}, {"field": "proportion", "type": "quantitative"}], "x": {"field": "label", "title": "Label", "type": "nominal"}, "y": {"field": "proportion", "scale": {"domain": [0, 1]}, "title": "Proportion", "type": "quantitative"}}, "height": 250, "title": "Dataset Distribution", "width": 300}]}, {"hconcat": [{"data": {"name": "data-f84392766f9884dff83aeb82b82d2486"}, "mark": {"type": "rect"}, "encoding": {"color": {"field": "count", "scale": {"scheme": "blues"}, "type": "quantitative"}, "tooltip": [{"field": "expected", "type": "nominal"}, {"field": "predicted", "type": "nominal"}, {"field": "count", "type": "quantitative"}], "x": {"field": "predicted", "title": "Predicted", "type": "nominal"}, "y": {"field": "expected", "title": "True Label", "type": "nominal"}}, "height": 250, "title": "Confusion Matrix", "width": 300}, {"layer": [{"data": {"name": "data-5568cfcabe9b2a0fe850283be846769f"}, "mark": {"type": "bar", "color": "steelblue"}, "encoding": {"tooltip": [{"field": "metric", "type": "nominal"}, {"field": "value", "type": "quantitative"}, {"field": "threshold", "type": "quantitative"}, {"field": "passed", "type": "nominal"}], "x": {"field": "metric", "title": "", "type": "nominal"}, "y": {"field": "value", "scale": {"domain": [0, 1]}, "title": "Accuracy", "type": "quantitative"}}, "title": "Overall Accuracy (threshold: 70%)"}, {"data": {"name": "data-a15f941bd791bcbcd41c3431501f7baf"}, "mark": {"type": "rule", "color": "red", "strokeDash": [4, 4]}, "encoding": {"y": {"field": "threshold", "type": "quantitative"}}}], "height": 250, "width": 300}]}], "$schema": "https://vega.github.io/schema/vega-lite/v6.4.1.json", "datasets": {"data-02ed58d70ef973339177cd33a4cadf85": [{"expected": "benign", "accuracy": 0.9647058823529412, "count": 340}, {"expected": "malicious", "accuracy": 0.5992578849721707, "count": 539}], "data-573e98e8c2bf7b92cc2bff13bb293ce3": [{"label": "malicious", "count": 2692, "proportion": 0.6130721931222957}, {"label": "benign", "count": 1699, "proportion": 0.3869278068777044}], "data-f84392766f9884dff83aeb82b82d2486": [{"expected": "malicious", "predicted": "malicious", "count": 323}, {"expected": "benign", "predicted": "malicious", "count": 12}, {"expected": "benign", "predicted": "benign", "count": 328}, {"expected": "malicious", "predicted": "benign", "count": 216}], "data-5568cfcabe9b2a0fe850283be846769f": [{"metric": "Overall Accuracy", "value": 0.7406, "threshold": 0.7, "passed": true}], "data-a15f941bd791bcbcd41c3431501f7baf": [{"threshold": 0.7}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+
+<div id="vg-tooltip-element" class="vg-tooltip" style="top: 184px; left: 732px;"><table><tbody><tr><td class="key">label</td><td class="value">malicious</td></tr><tr><td class="key">count</td><td class="value">2692</td></tr><tr><td class="key">proportion</td><td class="value">0.613072193122</td></tr></tbody></table></div></body></html>
